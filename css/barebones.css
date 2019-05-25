@@ -75,7 +75,7 @@ html {
 	Note: prefers-color-scheme selector support is still limited, but 
 	included for future and an example of defining a different base 'theme'
 */
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 	:html {
 		/* dark theme: light background, dark text, blue accent */
 		--theme-hue: 0;					/* black */
