@@ -76,7 +76,7 @@ html {
 	included for future and an example of defining a different base 'theme'
 */
 @media (prefers-color-scheme: dark) {
-	:html {
+	:root {
 		/* dark theme: light background, dark text, blue accent */
 		--theme-hue: 0;					/* black */
 		--accent-hue: 194;			/* blue */
