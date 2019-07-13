@@ -47,12 +47,19 @@ html {
 	--accent-hue: 194;			/* blue */
 
 	--text-color-richer: hsl(var(--theme-hue), 0%, 5%);			/* #0d0d0d		*/
-	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222 		text color; button:hover:focus color */
-	--text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 		button color; button:hover border */
+	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222		text color */
+	--text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 */
 
   --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
   --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
 
+	--button-color: var(--text-color-softer);								/* button color */
+	--button-color-hover: var(--text-color-normal);					/* button:hover:focus color */
+
+	--button-background: transparent;												/* button, input[type="submit" | "reset" | "button"] */
+	--button-background-hover: transparent;									/* button:hover, input[type="submit" | "reset" | "button"]:hover */
+
+  --border-color-richer: hsl(var(--theme-hue), 0%, 57%);	/* #888888		button:hover border */
   --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
 	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
 	
@@ -61,9 +68,9 @@ html {
   --code-background: hsl(var(--theme-hue), 0%, 95%);			/* #f1f1f1 		code background*/
 
 	--button-primary-color: white;
-  
-	
-	/* Note: Skeleton was based off a 10px font sizing for REM  */
+
+
+  /* Note: Skeleton was based off a 10px font sizing for REM  */
 	/* 62.5% of typical 16px browser default = 10px */
 	--base-font-size: 62.5%;
 	
@@ -81,13 +88,20 @@ html {
 		--theme-hue: 0;					/* black */
 		--accent-hue: 194;			/* blue */
 
-		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
-		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
-		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
+		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* #f2f2f2 */
+		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* #cccccc		text color */
+		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* #ababab */
 
 		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
 		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
 
+		--button-color: var(--text-color-softer);								/* button color */
+		--button-color-hover: var(--text-color-normal);					/* button:hover:focus color */
+
+		--button-background: transparent;												/* button, input[type="submit" | "reset" | "button"] */
+		--button-background-hover: transparent;									/* button:hover, input[type="submit" | "reset" | "button"]:hover */
+
+		--border-color-richer: hsl(var(--theme-hue), 0%, 67%);	/* #ababab		button:hover border */
 		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
 		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
 	
@@ -227,7 +241,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: var(--text-color-softer);
+  color: var(--button-color);
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -236,7 +250,7 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: var(--button-background);
   border-radius: 4px;
   border: 1px solid var(--border-color);
   cursor: pointer;
@@ -251,8 +265,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: var(--text-color-normal);
-  border-color: var(--text-color-softer);
+	color: var(--button-color-hover);
+	background-color: var(--button-background-hover);
+  border-color: var(--border-color-richer);
   outline: 0; }
 .button.button-primary,
 button.button-primary,
