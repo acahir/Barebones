@@ -52,6 +52,7 @@ html {
 
   --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
   --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+  --accent-color-disabled: hsl(var(--accent-hue), 90%, 80%);
 
   --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
 	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
@@ -87,6 +88,7 @@ html {
 
 		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
 		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
+		--accent-color-disabled: hsl(var(--accent-hue), 90%, 80%);
 
 		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
 		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
@@ -275,6 +277,24 @@ input[type="button"].button-primary:focus {
   color: var(--button-primary-color);
   background-color: var(--accent-color-hover);
   border-color: var(--accent-color-hover); }
+.button:disabled,
+button:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled {
+	color: var(--button-color);
+	background-color: var(--background-color-softer);
+	border-color: var(--background-color-softer);
+	cursor: default; }
+.button.button-primary:disabled,
+button.button-primary:disabled,
+input[type="submit"].button-primary:disabled,
+input[type="reset"].button-primary:disabled,
+input[type="button"].button-primary:disabled {
+	color: var(--button-primary-color);
+	background-color: var(--accent-color-disabled);
+	border-color: var(--accent-color-disabled);
+	cursor: default; }
 
 
 /* Forms
