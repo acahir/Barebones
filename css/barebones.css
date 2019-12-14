@@ -47,11 +47,11 @@ html {
 	--accent-hue: 194;			/* blue */
 
 	--text-color-richer: hsl(var(--theme-hue), 0%, 5%);			/* #0d0d0d		*/
-	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222 		text color; button:hover:focus color */
+	--text-color-normal: hsl(var(--theme-hue), 0%, 13%);		/* #222222 		text color; button:hover:active color */
 	--text-color-softer: hsl(var(--theme-hue), 0%, 33%);		/* #555555 		button color; button:hover border */
 
   --accent-color: hsl(var(--accent-hue), 86%, 57%);				/* #33C3F0 		link; button-primary bg+border; textarea,select:focus border */
-  --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:focus bg+border */
+  --accent-color-hover: hsl(var(--accent-hue), 76%, 49%);	/* #1EAEDB 		link hover; button-primary:hover:active bg+border */
 
   --border-color: hsl(var(--theme-hue), 0%, 73%);					/* #bbbbbb		button border */
 	--border-color-softer: hsl(var(--theme-hue), 0%, 82%);	/* #d1d1d1		textarea,select,code,td,hr border	 */
@@ -82,11 +82,11 @@ html {
 		--accent-hue: 194;			/* blue */
 
 		--text-color-richer: hsl(var(--theme-hue), 0%, 95%);		/* 		*/
-		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:focus color */
+		--text-color-normal: hsl(var(--theme-hue), 0%, 80%);		/* text color; button:hover:active color */
 		--text-color-softer: hsl(var(--theme-hue), 0%, 67%);		/* button color; button:hover border */
 
 		--accent-color: hsl(var(--accent-hue), 76%, 49%);				/* link; button-primary bg+border; textarea,select:focus border */
-		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:focus bg+border */
+		--accent-color-hover: hsl(var(--accent-hue), 86%, 57%);	/* link hover; button-primary:hover:active bg+border */
 
 		--border-color: hsl(var(--theme-hue), 0%, 27%);					/* button border */
 		--border-color-softer: hsl(var(--theme-hue), 0%, 20%);	/* textarea,select,code,td,hr border	 */
@@ -246,11 +246,11 @@ button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
+.button:active,
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active {
   color: var(--text-color-normal);
   border-color: var(--text-color-softer);
   outline: 0; }
@@ -267,11 +267,11 @@ button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
+.button.button-primary:active,
+button.button-primary:active,
+input[type="submit"].button-primary:active,
+input[type="reset"].button-primary:active,
+input[type="button"].button-primary:active {
   color: var(--button-primary-color);
   background-color: var(--accent-color-hover);
   border-color: var(--accent-color-hover); }
