@@ -291,6 +291,7 @@ select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: var(--background-color);
+  color: var(--text-color-softer);
   border: 1px solid var(--border-color-softer);
   border-radius: 4px;
   box-shadow: none;
